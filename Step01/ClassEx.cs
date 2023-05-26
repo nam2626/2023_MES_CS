@@ -9,6 +9,14 @@ namespace Step01
     class Animal
     {
         private int age;
+
+        //프로퍼티(Property)
+        public int Age
+        {
+            get => age; set => age = value;
+        }
+        
+
         public Animal() {
             Console.WriteLine("기본 생성자");
             age = 10;
@@ -29,6 +37,10 @@ namespace Step01
             a.printAnimalInfo();
 
             Animal b = new Animal(100);
+
+            //프로퍼티(property) 사용법
+            b.Age = 200;
+            Console.WriteLine($"{b.Age}");
             b.printAnimalInfo();
         }
     }
