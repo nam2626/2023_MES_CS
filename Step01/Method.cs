@@ -24,6 +24,18 @@ namespace Step01
             n1 = n2;
             n2 = temp;
         }
+        
+        static void RefSwap(ref int n1, ref int n2)
+        {
+            int temp = n1;
+            n1 = n2;
+            n2 = temp;
+        }
+
+        static void CircleArea(int r, out double area)
+        {
+            area = r * r * 3.1415;
+        }
 
         static void Main(string[] args)
         {
@@ -35,9 +47,16 @@ namespace Step01
             int n1 = 10;
             int n2 = 20;
 
+            //Call By Value 방식이라 값이 서로 바뀌지 않음 
             Swap(n1, n2);
             Console.WriteLine(n1 + " " + n2);
 
+            RefSwap(ref n1, ref n2);
+            Console.WriteLine(n1 + " " + n2);
+
+            double area = 0.0;
+            CircleArea(3, out area);
+            Console.WriteLine(area);
         }
     }
 }
