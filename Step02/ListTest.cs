@@ -44,7 +44,17 @@ namespace Step02
     {
         static void Main(string[] args)
         {
+            List<Person> list = new List<Person>();
+            list.Add(new Person("홍1", 20));
+            list.Add(new Person("홍2", 30));
+            list.Add(new Person("홍3", 40));
+            list.Add(new Person("홍4", 50));
+            list.Add(new Person("홍5", 60));
 
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
         }
     }
 }
