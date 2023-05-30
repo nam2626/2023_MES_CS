@@ -30,7 +30,9 @@ namespace Step02
     {
         static void Main(string[] args)
         {
-
+            Power power = new TV();
+            power.PowerOn();
+            power.PowerOff();
         }
     }
 }
