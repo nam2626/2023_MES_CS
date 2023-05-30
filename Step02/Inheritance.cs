@@ -13,6 +13,7 @@ namespace Step02
         public Animal(int age)
         {
             this.age = age;
+            Console.WriteLine("Animal 생성자");
         }
 
         public int Age { get => age; set => age = value; }
@@ -27,10 +28,12 @@ namespace Step02
     {
         public Person(int age) : base(age)
         {
+            Console.WriteLine("Person 생성자");
         }
 
         public override void printInfo()
         {
+            base.printInfo();//부모가 가지고 있는 printInfo 실행
             Console.WriteLine($"이 사람의 나이{age}");
         }
 
@@ -40,7 +43,10 @@ namespace Step02
     {
         static void Main(string[] args)
         {
-
+            Person p = new Person(100);
+            p.printInfo();
+            Animal a = p;
+            a.printInfo();
         }
     }
 }
