@@ -36,10 +36,23 @@
                    age == animal.age;
         }
 
+
+
         //정보 출력하는 메서드
         public void printAnimalInfo()
         {
             Console.WriteLine($"이 동물의 이름 : {Name}, 나이 : {Age}");
+        }
+
+        //연산자 오버로딩
+        public static bool operator ==(Animal? left, Animal? right)
+        {
+            return EqualityComparer<Animal>.Default.Equals(left, right);
+        }
+
+        public static bool operator !=(Animal? left, Animal? right)
+        {
+            return !(left == right);
         }
     }
     internal class Program
@@ -51,6 +64,12 @@
             a.Name = "개";
             a.printAnimalInfo();
 
+            Animal c = a;
+            Animal d = new Animal("개", 20);
+
+            Console.WriteLine(a == d);
+            Console.WriteLine(a == c);
+            Console.WriteLine(a.Equals(d));
         }
 
     }
