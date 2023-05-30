@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,7 +22,7 @@ namespace Step02
     {
         private static Number instance = new Number();
         private int count = 0;
-
+        private static readonly int MAX_NUMBER = 100;
         private Number(){
             count++;
         }
