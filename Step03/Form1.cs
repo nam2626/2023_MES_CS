@@ -47,9 +47,14 @@ namespace Step03
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //현재 선택된 리스트 아이템을 삭제
-            int idx = listView1.FocusedItem.Index;
-            MessageBox.Show(idx.ToString());
+            //선택된 것이 있는지 체크
+            if(listView1.SelectedItems.Count != 0) { 
+                //현재 선택된 리스트 아이템을 삭제
+                int idx = listView1.FocusedItem.Index;
+                MessageBox.Show(idx.ToString());
+                listView1.Items.RemoveAt(idx);
+            }
+
         }
     }
 }
