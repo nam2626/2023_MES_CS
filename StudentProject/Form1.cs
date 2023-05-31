@@ -38,5 +38,17 @@ namespace StudentProject
                 MessageBox.Show("삭제가 완료되었습니다.");
             }
         }
+
+        private void lstStudent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstStudent.SelectedItems.Count != 0)
+            {
+                int idx = lstStudent.FocusedItem.Index;
+                txtStudentNo.Text = lstStudent.Items[idx].SubItems[0].Text;
+                txtStudentName.Text = lstStudent.Items[idx].SubItems[1].Text;
+                cbxMajor.SelectedItem = lstStudent.Items[idx].SubItems[2].Text;
+                txtScore.Text = lstStudent.Items[idx].SubItems[3].Text;
+            }
+        }
     }
 }

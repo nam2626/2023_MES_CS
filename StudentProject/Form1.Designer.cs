@@ -59,6 +59,7 @@
             this.lstStudent.TabIndex = 0;
             this.lstStudent.UseCompatibleStateImageBehavior = false;
             this.lstStudent.View = System.Windows.Forms.View.Details;
+            this.lstStudent.SelectedIndexChanged += new System.EventHandler(this.lstStudent_SelectedIndexChanged);
             // 
             // txtStudentNo
             // 
