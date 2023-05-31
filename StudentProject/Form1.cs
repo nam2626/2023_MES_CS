@@ -62,5 +62,22 @@ namespace StudentProject
                 lstStudent.Items[idx].SubItems[3].Text = txtScore.Text;
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < lstStudent.Items.Count; i++)
+            {
+                if (lstStudent.Items[i].SubItems[0].Text.Equals(txtSearch.Text))
+                {
+                    lstStudent.Items[i].Focused = true;
+                    lstStudent.Items[i].Selected = true;
+                }
+                else
+                {
+                    lstStudent.Items[i].Focused = false;
+                    lstStudent.Items[i].Selected = false;
+                }
+            }
+        }
     }
 }

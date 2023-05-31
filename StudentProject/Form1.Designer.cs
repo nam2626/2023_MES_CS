@@ -37,11 +37,11 @@
             this.txtStudentName = new System.Windows.Forms.TextBox();
             this.txtScore = new System.Windows.Forms.TextBox();
             this.cbxMajor = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstStudent
@@ -122,13 +122,13 @@
             this.cbxMajor.Size = new System.Drawing.Size(222, 32);
             this.cbxMajor.TabIndex = 4;
             // 
-            // textBox4
+            // txtSearch
             // 
-            this.textBox4.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(373, 279);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(222, 35);
-            this.textBox4.TabIndex = 5;
+            this.txtSearch.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(373, 279);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(222, 35);
+            this.txtSearch.TabIndex = 5;
             // 
             // btnAdd
             // 
@@ -163,26 +163,27 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // button4
+            // btnSearch
             // 
-            this.button4.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.Location = new System.Drawing.Point(618, 272);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(154, 44);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "검색";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSearch.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch.Location = new System.Drawing.Point(618, 272);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(154, 44);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.Text = "검색";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.cbxMajor);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.txtStudentName);
@@ -206,11 +207,11 @@
         private System.Windows.Forms.TextBox txtStudentName;
         private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.ComboBox cbxMajor;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 
