@@ -52,9 +52,17 @@ namespace Step02
             list.Add(new Person("홍5", 60));
 
             for (int i = 0; i < list.Count; i++)
-            {
                 Console.WriteLine(list[i]);
-            }
+
+            list.Remove(new Person("홍4",50)); //동일한 내용의 객체 삭제
+            list.RemoveAt(0);//인덱스 번호로 삭제
+            for (int i = 0; i < list.Count; i++)
+                Console.WriteLine(list[i]);
+
+            Console.WriteLine(list.IndexOf(new Person("홍3", 40)));
+
+            list.Clear();//비우기
+            list.Contains(new Person("홍3", 40));//해당 객체가 있냐?
         }
     }
 }
