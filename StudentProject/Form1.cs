@@ -50,5 +50,17 @@ namespace StudentProject
                 txtScore.Text = lstStudent.Items[idx].SubItems[3].Text;
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (lstStudent.SelectedItems.Count != 0)
+            {
+                int idx = lstStudent.FocusedItem.Index;
+                lstStudent.Items[idx].SubItems[0].Text = txtStudentNo.Text;
+                lstStudent.Items[idx].SubItems[1].Text = txtStudentName.Text;
+                lstStudent.Items[idx].SubItems[2].Text= cbxMajor.SelectedItem.ToString();
+                lstStudent.Items[idx].SubItems[3].Text = txtScore.Text;
+            }
+        }
     }
 }
