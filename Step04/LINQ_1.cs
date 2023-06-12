@@ -9,6 +9,7 @@ namespace Step04
     internal class LINQ_1
     {
         /* select 추출할 데이터
+         * orderby 정렬기준
          * where 조건절
          * from 데이터 집합
          */
@@ -17,6 +18,7 @@ namespace Step04
             int[] numbers = { 9, 2, 6, 4, 5, 3, 7, 8, 1, 10 };
 
             var result = from n in numbers
+                         orderby n descending
                          where n % 2 == 0
                          select n;
 
