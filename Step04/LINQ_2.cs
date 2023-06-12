@@ -27,6 +27,7 @@ namespace Step04
             };
 
             var profiles = from profile in arrProfile
+                           orderby profile.Height descending
                            where profile.Height >= 175
                            select new
                            {
