@@ -53,6 +53,25 @@ namespace Step04
                 Console.WriteLine("이름:{0}, 작품:{1}, 키:{2}cm",
                     profile.Name, profile.Work, profile.Height);
             }
+
+            var listProfiles =
+                from profile in arrProfile
+                join product in arrProduct on profile.Name equals product.Star into ps
+                from sub_product in ps.DefaultIfEmpty(new Product() { Title = "그런거 없음" })
+                select new
+                {
+                    Name = profile.Name,
+                    Work = sub_product.Title,
+                    Height = profile.Height
+                };
+
+            Console.WriteLine();
+            Console.WriteLine("--- 외부 조인 결과 ---");
+            foreach (var profile in listProfiles)
+            {
+                Console.WriteLine("이름:{0}, 작품:{1}, 키:{2}cm",
+                    profile.Name, profile.Work, profile.Height);
+            }
         }
     }
 }
