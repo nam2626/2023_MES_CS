@@ -37,6 +37,22 @@ namespace Step04
                 new Product(){Title="모래시계",    Star="고현정"},
                 new Product(){Title="Solo 예찬",   Star="이문세"}
             };
+
+            var listProfile =
+                from profile in arrProfile
+                join product in arrProduct on profile.Name equals product.Star
+                select new
+                {
+                    Name = profile.Name,
+                    Height = profile.Height,
+                    Work = product.Title
+                };
+            Console.WriteLine("--- 내부 조인 결과 ---");
+            foreach (var profile in listProfile)
+            {
+                Console.WriteLine("이름:{0}, 작품:{1}, 키:{2}cm",
+                    profile.Name, profile.Work, profile.Height);
+            }
         }
     }
 }
